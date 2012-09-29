@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.Practices.ServiceLocation;
+
+
+namespace Lesson2Unity
+{
+    public class OtherWarrior
+    {
+        private IWeapon _weapon; 
+
+        public IWeapon Weapon
+        {
+            get
+            {
+                if (_weapon == null)
+                {
+                    _weapon = ServiceLocator.Current.GetInstance<IWeapon>();
+                }
+                return _weapon;
+            }
+        }
+
+        public void Kill()
+        {
+            Weapon.Kill();
+        }
+    }
+}
