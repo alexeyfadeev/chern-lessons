@@ -1,0 +1,14 @@
+
+Name : Sword
+
+Access : vsCMAccessPublic
+
+Attributes : 
+ 
+   Obsolete
+
+Bases : 
+ 
+   Object
+
+Comment :  

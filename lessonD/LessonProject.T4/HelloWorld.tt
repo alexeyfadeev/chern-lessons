@@ -1,0 +1,36 @@
+﻿<#@ template debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core" #>
+<#@ Assembly Name="System.Windows.Forms" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #> 
+<#@ import namespace="Microsoft.VisualStudio.TextTemplating" #> 
+<#
+   var greeting = "Hello, World!";
+#>
+// This is the output code from your template
+// you only get syntax-highlighting here - not intellisense
+namespace MyNameSpace 
+{
+	class MyGeneratedClass 
+	{
+		static void main (string[] args) 
+		{
+		<# 
+	 var session = new TextTemplatingSession();
+		session["MyParameter"] = "SessionValue";
+			#>
+			System.Console.WriteLine("<#= greeting #>");
+		}
+	}
+}
+ 
+<#+
+  // Insert any template procedures here
+  void foo(){}
+#>
+

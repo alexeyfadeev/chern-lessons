@@ -1,0 +1,28 @@
+
+FullName : LessonProject.Scaffolding.Warrior
+Name : vsCMElementClass Warrior
+Access : vsCMAccessPublic
+Attributes : 
+
+Bases : 
+ 
+   Object
+
+Comment :  
+DocComment :  <doc>
+<summary>
+This is LEGENDARY WARRIOR!
+</summary>
+</doc>
+
+StartPoint : Line: 12
+EndPoint :  Line : 25
+
+Members :
+ 
+   vsCMElementVariable Weapon
+ 
+   vsCMElementFunction Warrior
+ 
+   vsCMElementFunction Kill
+

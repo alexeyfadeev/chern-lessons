@@ -1,0 +1,39 @@
+﻿<#@ template language="C#"  HostSpecific="True" Inherits="DynamicTransform" debug="true" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="EnvDTE" #>
+<#@ Output Extension="txt" #>
+<# 
+    var modelType = (EnvDTE.CodeType)Model.ModelType; 
+#>
+
+FullName : <#= modelType.FullName #>
+Name : <#= modelType.Kind #> <#= modelType.Name #>
+Access : <#= modelType.Access #>
+Attributes : 
+<# foreach(var codeElement in modelType.Attributes) { 
+	var attr = (EnvDTE.CodeAttribute)codeElement;
+#> 
+   <#= attr.Name #>
+<# } #>
+
+Bases : 
+<# foreach(var codeElement in modelType.Bases) { 
+	var @base = (EnvDTE.CodeType)codeElement;
+#> 
+   <#= @base.Name #>
+<# } #>
+
+Comment :  <#= modelType.Comment #>
+DocComment :  <#= modelType.DocComment #>
+
+StartPoint : Line: <#= ((EnvDTE.TextPoint)modelType.StartPoint).Line #>
+EndPoint :  Line : <#= ((EnvDTE.TextPoint)modelType.EndPoint).Line #>
+
+Members :
+<# foreach(var codeElement in modelType.Members) { 
+	var member = (EnvDTE.CodeElement)codeElement;
+#> 
+   <#= member.Kind #> <#= member.Name #>
+<# } #>
+
