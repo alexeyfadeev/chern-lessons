@@ -61,10 +61,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Proxy\Language.cs" />
+    <Compile Include="Proxy\Notify.cs" />
     <Compile Include="Proxy\Post.cs" />
     <Compile Include="Proxy\User.cs" />
     <Compile Include="SqlRepository.cs" />
     <Compile Include="SqlRepository\Language.cs" />
+    <Compile Include="SqlRepository\Notify.cs" />
     <Compile Include="SqlRepository\Post.cs" />
     <Compile Include="SqlRepository\Role.cs" />
     <Compile Include="SqlRepository\User.cs" />
