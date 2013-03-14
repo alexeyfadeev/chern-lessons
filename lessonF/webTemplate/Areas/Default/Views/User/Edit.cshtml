@@ -1,0 +1,62 @@
+﻿@model webTemplate.Models.ViewModels.User.UserView
+@{
+    ViewBag.Title = GlobalRes.edit_user;
+    Layout = "~/Areas/Default/Views/Shared/_Layout.cshtml";
+    
+}
+@section styles {
+    @Styles.Render("~/Content/css/fineuploader")
+}
+@section header
+{
+    @Scripts.Render("~/bundles/fineuploader")
+    <script type="text/javascript" src="/Scripts/default/edit-user.js"></script>
+}
+@using (Html.BeginForm("Edit", "User", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    @Html.Hidden("ID", Model.ID)
+    @Html.Hidden("AvatarPath", Model.AvatarPath)
+    <div class="row">
+        <div class="span4 offset2">
+            <img src="@Model.FullAvatarPath" alt="@Model.FirstName" id="AvatarImage" />
+            <br />
+            <br />
+            <div id="ChangeAvatar">@GlobalRes.change</div>
+        </div>
+        <div class="span5">
+            <fieldset>
+                <legend>@GlobalRes.edit_user</legend>
+                <div class="control-group">
+                    <label class="control-label" for="Email">
+                        @GlobalRes.email</label>
+                    <div class="controls">
+                        @Html.TextBox("Email", Model.Email, new { @class = "input-xlarge" })
+                        <p class="help-block">@GlobalRes.enter_email</p>
+                        @Html.ValidationMessage("Email")
+                    </div>
+                </div>
+                <div class="control-group @(Model.IsCorrectLang ? "" : "warning")">
+                    <label class="control-label" for="FirstName">
+                        @GlobalRes.first_name</label>
+                    <div class="controls">
+                        @Html.TextBox("FirstName", Model.FirstName, new { @class = ("input-xlarge") })
+                        @Html.ValidationMessage("FirstName")
+                    </div>
+                </div>
+                <div class="control-group @(Model.IsCorrectLang ? "" : "warning")">
+                    <label class="control-label" for="LastName">
+                        @GlobalRes.last_name</label>
+                    <div class="controls">
+                        @Html.TextBox("LastName", Model.LastName, new { @class = "input-xlarge" })
+                        @Html.ValidationMessage("LastName")
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        @GlobalRes.save</button>
+                    @Html.ActionLink(GlobalRes.change_password, "ChangePassword", "User", null, new { @class = "btn" })
+                </div>
+            </fieldset>
+        </div>
+    </div>
+}

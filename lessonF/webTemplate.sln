@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webTemplate", "webTemplate\webTemplate.csproj", "{F2076709-1891-4A20-9345-C71F7D76AF94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webTemplate.Model", "webTemplate.Model\webTemplate.Model.csproj", "{54305171-F603-4070-9E75-1F7173681E8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webTemplate.Tools", "webTemplate.Tools\webTemplate.Tools.csproj", "{ACACA979-4B2B-4EC8-8E4A-825C2A5377B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageAttribute", "ManageAttribute\ManageAttribute.csproj", "{05960685-9A37-4B71-A94E-D009358ABA71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0C08DB2A-C878-4973-9ADA-4D92E51574ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateData", "Test\GenerateData\GenerateData.csproj", "{6B127020-1BCC-4D06-A290-9E30726FB10B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webTemplate.IntegrationTest", "Test\webTemplate.IntegrationTest\webTemplate.IntegrationTest.csproj", "{9B19CF7A-7710-436A-971E-43D411789B74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webTemplate.UnitTest", "Test\webTemplate.UnitTest\webTemplate.UnitTest.csproj", "{A86BCC92-47CC-47C0-9FF8-254198693A6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2076709-1891-4A20-9345-C71F7D76AF94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2076709-1891-4A20-9345-C71F7D76AF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2076709-1891-4A20-9345-C71F7D76AF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2076709-1891-4A20-9345-C71F7D76AF94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54305171-F603-4070-9E75-1F7173681E8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54305171-F603-4070-9E75-1F7173681E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54305171-F603-4070-9E75-1F7173681E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54305171-F603-4070-9E75-1F7173681E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACACA979-4B2B-4EC8-8E4A-825C2A5377B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACACA979-4B2B-4EC8-8E4A-825C2A5377B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACACA979-4B2B-4EC8-8E4A-825C2A5377B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACACA979-4B2B-4EC8-8E4A-825C2A5377B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05960685-9A37-4B71-A94E-D009358ABA71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05960685-9A37-4B71-A94E-D009358ABA71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05960685-9A37-4B71-A94E-D009358ABA71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05960685-9A37-4B71-A94E-D009358ABA71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B127020-1BCC-4D06-A290-9E30726FB10B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B127020-1BCC-4D06-A290-9E30726FB10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B127020-1BCC-4D06-A290-9E30726FB10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B127020-1BCC-4D06-A290-9E30726FB10B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B19CF7A-7710-436A-971E-43D411789B74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B19CF7A-7710-436A-971E-43D411789B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B19CF7A-7710-436A-971E-43D411789B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B19CF7A-7710-436A-971E-43D411789B74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A86BCC92-47CC-47C0-9FF8-254198693A6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A86BCC92-47CC-47C0-9FF8-254198693A6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A86BCC92-47CC-47C0-9FF8-254198693A6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A86BCC92-47CC-47C0-9FF8-254198693A6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6B127020-1BCC-4D06-A290-9E30726FB10B} = {0C08DB2A-C878-4973-9ADA-4D92E51574ED}
+		{9B19CF7A-7710-436A-971E-43D411789B74} = {0C08DB2A-C878-4973-9ADA-4D92E51574ED}
+		{A86BCC92-47CC-47C0-9FF8-254198693A6A} = {0C08DB2A-C878-4973-9ADA-4D92E51574ED}
+	EndGlobalSection
+EndGlobal

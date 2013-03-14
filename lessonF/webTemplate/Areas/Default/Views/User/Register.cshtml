@@ -1,0 +1,57 @@
+﻿@model webTemplate.Models.ViewModels.User.RegisterUserView
+@{
+    ViewBag.Title = GlobalRes.register;
+    Layout = "~/Areas/Default/Views/Shared/_Layout.cshtml";
+}
+@using (Html.BeginForm("Register", "User", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    <fieldset>
+        <legend>@GlobalRes.register</legend>
+        <div class="control-group">
+            <label class="control-label" for="Email">
+                @GlobalRes.email</label>
+            <div class="controls">
+                @Html.TextBox("Email", Model.Email, new { @class = "input-xlarge" })
+                <p class="help-block">@GlobalRes.enter_email</p>
+                @Html.ValidationMessage("Email")
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="Password">
+                @GlobalRes.password</label>
+            <div class="controls">
+                @Html.Password("Password", Model.Password, new { @class = "input-xlarge" })
+                @Html.ValidationMessage("Password")
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="ConfirmPassword">
+                @GlobalRes.confirm_password</label>
+            <div class="controls">
+                @Html.Password("ConfirmPassword", Model.ConfirmPassword, new { @class = "input-xlarge" })
+                @Html.ValidationMessage("ConfirmPassword")
+            </div>
+        </div>
+         <div class="control-group">
+            <div class="controls">
+                 <img src="@Url.Action("Captcha","User")" alt="captcha"/>
+            </div>
+        </div>
+       
+        <div class="control-group">
+            <label class="control-label" for="Captcha">
+                @GlobalRes.captcha</label>
+            <div class="controls">
+                @Html.TextBox("Captcha", Model.Captcha, new { @class = "input-xlarge" })
+                <p class="help-block">
+                    @GlobalRes.captcha_message
+                </p>
+                @Html.ValidationMessage("Captcha")
+            </div>
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+                @GlobalRes.register_ok</button>
+        </div>
+    </fieldset>
+}

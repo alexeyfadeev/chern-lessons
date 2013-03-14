@@ -1,0 +1,37 @@
+﻿@model webTemplate.Models.ViewModels.LoginViewModel
+@{
+    Layout = "~/Areas/Default/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = GlobalRes.sign_in;
+    
+}
+@using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @class = "form-horizontal" }))
+{
+    <fieldset>
+        <legend>@GlobalRes.sign_in</legend>
+        <div class="control-group">
+            <label class="control-label" for="Email">
+                @GlobalRes.email</label>
+            <div class="controls">
+                @Html.TextBox("Email", Model.Email, new { @class = "input-xlarge" })
+                <p class="help-block">@GlobalRes.enter_email</p>
+                @Html.ValidationMessage("Email")
+            </div>
+            
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="Password">
+                @GlobalRes.password</label>
+            <div class="controls">
+                @Html.Password("Password", Model.Password, new { @class = "input-xlarge" })
+                @Html.ValidationMessage("Password")
+            </div>
+        </div>
+        <div class="control-group">
+            @Html.ActionLink(@GlobalRes.are_you_forgot_password, "ForgotPassword", "Login")
+        </div>
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+                @GlobalRes.enter</button>
+        </div>
+    </fieldset>
+}

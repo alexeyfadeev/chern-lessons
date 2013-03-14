@@ -1,0 +1,2 @@
+2012-11-25 13:06:11.6265|ERROR|webTemplate.Global.Auth.CustomAuthentication|Failed authentication: Unable to validate data.
+2012-11-25 14:48:46.2075|ERROR|webTemplate.Global.Auth.CustomAuthentication|Failed authentication: Unable to validate data.

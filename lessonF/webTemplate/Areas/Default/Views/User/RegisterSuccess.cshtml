@@ -1,0 +1,7 @@
+﻿@model webTemplate.Model.User
+@{
+    ViewBag.Title = GlobalRes.register_success;
+    Layout = "~/Areas/Default/Views/Shared/_Layout.cshtml";
+}
+<h2>@GlobalRes.register_success</h2>
+<p>@(string.Format(GlobalRes.register_success_message, Model.Email))</p>

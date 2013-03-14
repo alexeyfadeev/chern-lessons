@@ -1,0 +1,1 @@
+2013-03-13 19:56:27.7078|ERROR|webTemplate.Global.Auth.CustomAuthentication|Failed authentication: Unable to validate data.

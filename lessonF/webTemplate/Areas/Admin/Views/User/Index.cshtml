@@ -1,0 +1,51 @@
+@model webTemplate.Model.PageableData<webTemplate.Model.User>
+@{
+    ViewBag.Title = "User";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<h2>User
+</h2>
+@Html.ActionLink("Create", "Create", "User", null, new { @class = "btn" })
+<table class="table">
+    <thead>
+        <tr>
+            <th>#
+            </th>
+            <th>Email
+            </th>
+            <th>FirstName
+            </th>
+            <th>LastName
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model.List)
+    {
+        <tr>
+            <td>
+                @item.ID
+                @if (!item.IsCorrectLang)
+                {
+                    <span class="label label-important">Translate it!</span>
+                }
+            </td>
+            <td>
+                @item.Email
+            </td>
+            <td>
+                @item.FirstName
+            </td>
+            <td>
+                @item.LastName
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", "User", new { id = item.ID }, new { @class = "btn" })
+            </td>
+        </tr>
+    }
+</table>
+<div class="pager">
+    @Html.PageLinks(Model.PageNo, Model.CountPage, x => Url.Action(Model.Action, new { page = x }))
+</div>

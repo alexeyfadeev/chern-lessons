@@ -1,0 +1,7 @@
+2012-11-22 10:24:37.4768|ERROR|webTemplate.Global.Auth.CustomAuthentication|Failed authentication: Unable to validate data.
+2012-11-22 10:24:41.8050|ERROR|webTemplate.Global.Auth.CustomAuthentication|Failed authentication: Unable to validate data.
+2012-11-22 10:24:41.8450|ERROR|webTemplate.Global.Auth.CustomAuthentication|Failed authentication: Unable to validate data.
+2012-11-22 10:24:42.3120|ERROR|webTemplate.Global.Auth.CustomAuthentication|Failed authentication: Unable to validate data.
+2012-11-22 10:43:45.9845|ERROR|webTemplate.Global.Auth.CustomAuthentication|Failed authentication: Unable to validate data.
+2012-11-22 10:43:49.7627|ERROR|webTemplate.Global.Auth.CustomAuthentication|Failed authentication: Unable to validate data.
+2012-11-22 10:43:53.2199|ERROR|webTemplate.Global.Auth.CustomAuthentication|Failed authentication: Unable to validate data.

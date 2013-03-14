@@ -1,0 +1,12 @@
+﻿@model webTemplate.Model.User
+
+@if (Model != null)
+{
+    <li>@Html.ActionLink(Model.Email, "Index", "User", new { lang = GlobalRes.curr_lang }, null)</li>
+    <li>@Html.ActionLink(GlobalRes.sign_out, "Logout", "Login", new { lang = GlobalRes.curr_lang }, null)</li>
+}
+else
+{
+    <li>@Html.ActionLink(GlobalRes.sign_in, "Index", "Login", new { lang = GlobalRes.curr_lang }, null)</li>
+    <li>@Html.ActionLink(GlobalRes.register, "Register", "User", new { lang = GlobalRes.curr_lang }, null)</li>
+}

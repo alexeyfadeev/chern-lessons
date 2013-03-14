@@ -1,0 +1,69 @@
+﻿body
+{
+    padding-top: 60px;
+}
+
+/* Additional ----------------------------------- */
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.overflow {
+    position: relative;
+    overflow: hidden;
+}
+
+.clear:after {
+    clear: both;
+    display: block;
+    content: '';
+    height: 0;
+    overflow: hidden;
+}
+
+/* Pager ---------------*/
+
+
+.pager
+{
+    float: right;
+    margin: 10px;
+}
+
+    .pager a
+    {
+        color: #000;
+        text-decoration: none;
+        padding: 0 5px;
+    }
+
+        .pager a:hover
+        {
+            background-color: #999;
+            color: #fff;
+        }
+
+        .pager a.selected
+        {
+            background-color: #999;
+            color: #fff;
+        }
+        
+.textarea {
+    width: 99%;
+    height: 400px;
+}
+
+.htmltext {
+    width: 99%;
+    height: 400px;
+}
+
+.field-validation-error {
+    margin: 5px 10px;
+    color: #b94a48;
+}

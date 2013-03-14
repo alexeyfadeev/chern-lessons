@@ -1,0 +1,33 @@
+﻿@model webTemplate.Model.User
+@{
+    ViewBag.Title = GlobalRes.user_page;
+    Layout = "~/Areas/Default/Views/Shared/_Layout.cshtml";
+    var currentUser = ((webTemplate.Controllers.BaseController)ViewContext.Controller).CurrentUser;
+}
+<h2>@GlobalRes.user_page</h2>
+<div class="row">
+    <div class="span3 offset3">
+        <img src="@Model.FullAvatarPath" alt="@Model.FirstName" />
+    </div>
+    <div class="span4">
+        <dl class="dl-horizontal">
+            <dt>@GlobalRes.email</dt>
+            <dd>@Model.Email</dd>
+            @if (!string.IsNullOrWhiteSpace(Model.FirstName))
+            {
+                <dt>@GlobalRes.first_name</dt>
+                <dd>@Model.FirstName</dd>
+            }
+            @if (!string.IsNullOrWhiteSpace(Model.LastName))
+            {
+                <dt>@GlobalRes.last_name</dt>
+                <dd>@Model.LastName</dd>
+            }
+        </dl>
+    </div>
+</div>
+
+@if (currentUser != null && currentUser.ID == Model.ID)
+{
+    @Html.ActionLink(GlobalRes.edit, "Edit", "User", null, new { @class = "btn" })
+}

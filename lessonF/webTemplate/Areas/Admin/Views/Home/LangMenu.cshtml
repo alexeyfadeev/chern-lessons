@@ -1,0 +1,6 @@
+﻿@model webTemplate.Areas.Admin.Models.View.LangAdminView
+           
+@using (Html.BeginForm("ChangeLanguage", "Home", FormMethod.Post, new { id = "SelectLangForm" }))
+{
+    @Html.DropDownList("selectedLang", Model.Langs)
+}

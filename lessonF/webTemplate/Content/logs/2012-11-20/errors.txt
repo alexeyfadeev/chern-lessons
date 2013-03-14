@@ -1,0 +1,1 @@
+2012-11-20 18:51:02.3231|ERROR|webTemplate.Tools.Mail.MailSender|Mail send exception

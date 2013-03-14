@@ -1,0 +1,24 @@
+- конфиг файлы (доступ к Web.config) 
+	- скопировать
+- создать песочницу 
+	- поместить БД в песочницу
+	- Repository с этой БД 
+- запустить тест
+- 
+
+
+
+
+-- Backup the database
+BACKUP DATABASE [webTemplate]
+TO DISK = 'D:\Db\db.bak'
+WITH COPY_ONLY
+ 
+
+DROP DATABASE [webTemplate_test]
+
+RESTORE DATABASE [webTemplate_test]
+FROM DISK = 'D:\Db\db.bak'
+WITH FILE = 1, MOVE N'webTemplate' TO N'd:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA\webTemplate_test.mdf',
+MOVE N'webTemplate_log' TO N'd:\Program Files\Microsoft SQL Server\MSSQL10_50.MSSQLSERVER\MSSQL\DATA\webTemplate_test_log.ldf',
+NOUNLOAD, STATS = 10

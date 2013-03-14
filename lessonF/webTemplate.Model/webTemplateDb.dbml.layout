@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.625" name="webTemplateDb">
+  <DataContextMoniker Name="/webTemplateDbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="2cd2598a-74e2-4f53-9f99-fdd58a1799ac" absoluteBounds="0.75, 4, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/webTemplateDbDataContext/Language" />
+      <nestedChildShapes>
+        <elementListCompartment Id="74f3b8fd-7bd3-4a30-ba79-bd0b1a0e027e" absoluteBounds="0.765, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c112f9cd-a0e7-4bac-ae7e-4976b795ddf4" absoluteBounds="6.25, 4, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/webTemplateDbDataContext/UserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="095298da-ba76-4c75-ac30-35663e27ce1d" absoluteBounds="6.265, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e9846552-d0be-4b23-bc0d-a8c8eff3ba8e" absoluteBounds="3.5, 8, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/webTemplateDbDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a59dddec-d61f-4b7d-a233-e44fbd5488d8" absoluteBounds="3.515, 8.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e98bc1f3-622a-4420-b88d-0280fff02a35" absoluteBounds="3.5, 3.375, 2, 2.5401025390625">
+      <DataClassMoniker Name="/webTemplateDbDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c752580-658b-429a-923f-da9098f16485" absoluteBounds="3.515, 3.835, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3b45d7c2-202a-441f-88b9-6411b3255015" absoluteBounds="6.25, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/webTemplateDbDataContext/UserLang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2419f7f4-eba8-4e84-a2e6-2723b7eafa23" absoluteBounds="6.265, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 8.69314697265625); (7.25 : 8.69314697265625); (7.25 : 5.3862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/webTemplateDbDataContext/Role/Role_UserRole" />
+      <nodes>
+        <classShapeMoniker Id="e9846552-d0be-4b23-bc0d-a8c8eff3ba8e" />
+        <classShapeMoniker Id="c112f9cd-a0e7-4bac-ae7e-4976b795ddf4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.69314697265625); (6.25 : 4.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/webTemplateDbDataContext/User/User_UserRole" />
+      <nodes>
+        <classShapeMoniker Id="e98bc1f3-622a-4420-b88d-0280fff02a35" />
+        <classShapeMoniker Id="c112f9cd-a0e7-4bac-ae7e-4976b795ddf4" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.69314697265625); (3.5 : 4.69314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/webTemplateDbDataContext/Language/Language_User" />
+      <nodes>
+        <classShapeMoniker Id="2cd2598a-74e2-4f53-9f99-fdd58a1799ac" />
+        <classShapeMoniker Id="e98bc1f3-622a-4420-b88d-0280fff02a35" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 4); (1.75 : 1.63544840494792); (6.25 : 1.63544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/webTemplateDbDataContext/Language/Language_UserLang" />
+      <nodes>
+        <classShapeMoniker Id="2cd2598a-74e2-4f53-9f99-fdd58a1799ac" />
+        <classShapeMoniker Id="3b45d7c2-202a-441f-88b9-6411b3255015" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 3.375); (4.5 : 2.10942510742187); (6.25 : 2.10942510742187)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/webTemplateDbDataContext/User/User_UserLang" />
+      <nodes>
+        <classShapeMoniker Id="e98bc1f3-622a-4420-b88d-0280fff02a35" />
+        <classShapeMoniker Id="3b45d7c2-202a-441f-88b9-6411b3255015" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
